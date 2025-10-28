@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritesh - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <h2>Portfolio Website</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Ritesh Patil</h1>
+            <p class="hero-tagline">Teaching machines to think, one model at a time.</p>
+            <a href="assets/{{RESUME_FILE}}" class="btn btn-primary" target="_blank">
+                <i class="fas fa-download"></i>
+                Download Resume
+            </a>
+        </div>
+        <div class="hero-scroll">
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="/assets/images/WhatsApp Image 2025-09-17 at 08.42.40.jpeg" alt="Ritesh" class="profile-img"\>
+                </div>
+                <div class="about-text">
+                    <p class="bio">{{SHORT_BIO}}</p>
+                    <div class="about-cards">
+                        <div class="card">
+                            <h3>Education</h3>
+                            <p>{{EDUCATION_DETAILS}}</p>
+                        </div>
+                        <div class="card">
+                            <h3>Experience</h3>
+                            <p>{{EXPERIENCE_DETAILS}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-bootstrap"></i>
+                            <span>Bootstrap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-sass"></i>
+                            <span>Sass</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-figma"></i>
+                            <span>Figma</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="../assets/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-content">
+                        <h3>{{PROJECT_1_TITLE}}</h3>
+                        <p>{{PROJECT_1_DESCRIPTION}}</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="{{PROJECT_1_DEMO}}" class="btn btn-outline" target="_blank">Demo</a>
+                            <a href="{{PROJECT_1_GITHUB}}" class="btn btn-outline" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-content">
+                        <h3>{{PROJECT_2_TITLE}}</h3>
+                        <p>{{PROJECT_2_DESCRIPTION}}</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="{{PROJECT_2_DEMO}}" class="btn btn-outline" target="_blank">Demo</a>
+                            <a href="{{PROJECT_2_GITHUB}}" class="btn btn-outline" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project3.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-content">
+                        <h3>{{PROJECT_3_TITLE}}</h3>
+                        <p>{{PROJECT_3_DESCRIPTION}}</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">SQLite</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="{{PROJECT_3_DEMO}}" class="btn btn-outline" target="_blank">Demo</a>
+                            <a href="{{PROJECT_3_GITHUB}}" class="btn btn-outline" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <p>Download my resume to learn more about my experience and qualifications.</p>
+                <a href="assets/{{RESUME_FILE}}" class="btn btn-primary btn-large" target="_blank">
+                    <i class="fas fa-download"></i>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>{{EMAIL}}</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="{{LINKEDIN_URL}}" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="{{GITHUB_URL}}" class="social-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; {{YEAR}} Ritesh. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="{{LINKEDIN_URL}}" class="social-link" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="{{GITHUB_URL}}" class="social-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
